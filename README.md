@@ -31,7 +31,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Zhaith_Izaliel/bootstrappers">
+  <a href="https://github.com/Zhaith-Izaliel/bootstrappers">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -40,14 +40,14 @@
   <p align="center">
     A collection of bootstrappers to quickly start a project, powered by Nix flake's templates.
     <br />
-    <a href="https://github.com/Zhaith_Izaliel/bootstrappers"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Zhaith-Izaliel/bootstrappers"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Zhaith_Izaliel/bootstrappers">View Demo</a>
+    <a href="https://github.com/Zhaith-Izaliel/bootstrappers">View Demo</a>
     &middot;
-    <a href="https://github.com/Zhaith_Izaliel/bootstrappers/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/Zhaith-Izaliel/bootstrappers/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
-    <a href="https://github.com/Zhaith_Izaliel/bootstrappers/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/Zhaith-Izaliel/bootstrappers/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -148,7 +148,7 @@ With `name` being one of the subdirectory of this repo.
 
 I will add more template as long as it fits my usage.
 
-See the [open issues](https://github.com/Zhaith_Izaliel/bootstrappers/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Zhaith-Izaliel/bootstrappers/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,8 +172,8 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/Zhaith_Izaliel/bootstrappers/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Zhaith_Izaliel/bootstrappers" alt="contrib.rocks image" />
+<a href="https://github.com/Zhaith-Izaliel/bootstrappers/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Zhaith-Izaliel/bootstrappers" alt="contrib.rocks image" />
 </a>
 
 
@@ -192,7 +192,7 @@ Distributed under the MIT. See [`LICENSE.md`](./LICENSE.md) for more information
 
 Your Name - [@zhaith-izaliel.bsky.social](https://bsky.app/profile/zhaith-izaliel.bsky.social) - zhaith.izaliel@silvered-ivy.games.com
 
-Project Link: [https://github.com/Zhaith_Izaliel/bootstrappers](https://github.com/Zhaith_Izaliel/bootstrappers)
+Project Link: [https://github.com/Zhaith-Izaliel/bootstrappers](https://github.com/Zhaith-Izaliel/bootstrappers)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -209,16 +209,16 @@ Project Link: [https://github.com/Zhaith_Izaliel/bootstrappers](https://github.c
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Zhaith_Izaliel/bootstrappers.svg?style=for-the-badge
-[contributors-url]: https://github.com/Zhaith_Izaliel/bootstrappers/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Zhaith_Izaliel/bootstrappers.svg?style=for-the-badge
-[forks-url]: https://github.com/Zhaith_Izaliel/bootstrappers/network/members
-[stars-shield]: https://img.shields.io/github/stars/Zhaith_Izaliel/bootstrappers.svg?style=for-the-badge
-[stars-url]: https://github.com/Zhaith_Izaliel/bootstrappers/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Zhaith_Izaliel/bootstrappers.svg?style=for-the-badge
-[issues-url]: https://github.com/Zhaith_Izaliel/bootstrappers/issues
-[license-shield]: https://img.shields.io/github/license/Zhaith_Izaliel/bootstrappers.svg?style=for-the-badge
-[license-url]: https://github.com/Zhaith_Izaliel/bootstrappers/blob/master/LICENSE.md
+[contributors-shield]: https://img.shields.io/github/contributors/Zhaith-Izaliel/bootstrappers.svg?style=for-the-badge
+[contributors-url]: https://github.com/Zhaith-Izaliel/bootstrappers/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Zhaith-Izaliel/bootstrappers.svg?style=for-the-badge
+[forks-url]: https://github.com/Zhaith-Izaliel/bootstrappers/network/members
+[stars-shield]: https://img.shields.io/github/stars/Zhaith-Izaliel/bootstrappers.svg?style=for-the-badge
+[stars-url]: https://github.com/Zhaith-Izaliel/bootstrappers/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Zhaith-Izaliel/bootstrappers.svg?style=for-the-badge
+[issues-url]: https://github.com/Zhaith-Izaliel/bootstrappers/issues
+[license-shield]: https://img.shields.io/github/license/Zhaith-Izaliel/bootstrappers.svg?style=for-the-badge
+[license-url]: https://github.com/Zhaith-Izaliel/bootstrappers/blob/master/LICENSE.md
 
 [product-screenshot]: images/screenshot.png
 [Nix]: https://img.shields.io/badge/nix-0B1120?style=for-the-badge&logo=nixos
