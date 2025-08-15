@@ -27,7 +27,7 @@
     "typescript",
     "eslint"
   ],
-  "author": "Virgil Ribeyre",
+  "author": "Firstname Lastname",
   "license": "MIT",
   "devDependencies": {
     "@stylistic/eslint-plugin-js": "^1.5.3",

@@ -1,92 +1,245 @@
-# Rust-Starter-Kit
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a id="readme-top"></a>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-## Description
 
-This project is a boilerplate for projects in Rust.
 
-## Step by step procedure
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![project_license][license-shield]][license-url]
 
-1. Clone the git repository
-2. Remove the .git directory
-3. Open Cargo.toml and change the project name for your new project
-4. Remove the `LICENSE.md` file if needed
-5. Change the `README.md` file using the provided template and remove `README.template.md`
-6. Start coding: main files in src, test files in tests.
 
-## Get started
 
-### Remove the git directory
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-```bash
-rm -rf .git
-```
+<h3 align="center">project_title</h3>
 
-### Open Cargo.toml
+  <p align="center">
+    project_description
+    <br />
+    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    &middot;
+    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    &middot;
+    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+</div>
 
-```toml
-[package]
-name = "rust-starter-kit"
-version = "0.1.0"
-edition = "2021"
-```
 
-- Change the `name` field to the name of Gitlab repository including the group name for scoped packages.
-- Change the `version` field to whatever you want, keeping the Semantic Versioning (see [SemVer](https://semver.org/) if you are not well versed in Semantic Versioning).
-- Save your changes
 
-#### Special procedure if using Nix
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-For you convenience and to simplify build dependencies and ensure consistency around your NixOS configuration, the project contains a flake to build and work in. It also contains a `direnv` configuration to bring forth the dependencies in your development shell provided by the flake.
 
-You will need to change all the occurrences of `rust-starter-kit` in `flake.nix`:
 
-```nix
-packages = {
-    # BOOTSTRAP: Replace "rust-starter-kit" with your package name
-    rust-starter-kit = (rustPkgs.workspace.rust-starter-kit {}).bin;
-    default = packages.rust-starter-kit;
-    shell = devShells.default;
-};
-```
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-After your changes you need to update the `Cargo.nix` file using `cargo2nix`:
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-```bash
-cargo build
-cargo2nix
-```
+Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github_username`, `repo_name`, `bluesky_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`, `project_exec`
 
-Additionally the flake provides a workspace shell to work in, you can update it by changes the associated function:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```nix
-workspaceShell = (rustPkgs.workspaceShell {
-    packages = [
-        pkgs.rustup
-        pkgs.rust-analyzer
-        cargo2nixBin
-    ];
-    # shellHook = ''
-    #   echo "In shell"
-    # '';
-}); # supports override & overrideAttrs
-```
 
-### Remove the LICENSE file
 
-```bash
-rm -rf LICENSE.md
-```
+### Built With
 
-### Change the README.md file
+* [![Rust][Rust]][Rust-url]
+* [![Bevy][Bevy]][Bevy-url]
+* [![Nix][Nix]][Nix-url]
 
-Obviously, you don't want to keep this file like this, you want to add the README of your own project. You can use the provided template to create your new README.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-When you are done don't forget to remove the `README.template.md`
 
-```bash
-rm -rf README.template.md
-```
 
-### Start coding
+<!-- GETTING STARTED -->
+## Getting Started
 
-Every source file should be in `src` directory and every test file in `tests/unit` directory.
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+project_title requires the Rust Compiler if you plan to compile it, you will also need Cargo to build the project.
+* `rustc` >= 1.86.0
+* `cargo` >= 1.86.0
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://gitlab.com/gitlab_namespace/repo_name.git
+   ```
+2. Install Cargo and Rustc from your package manager.
+3. Build project_title with Cargo in release mode 
+   ```sh
+   cargo build --release
+   ```
+4. An executable for project_title will be available in `target/release/project_exec`
+
+#### With Nix
+
+1. Import the project in your flake inputs
+   ```nix
+   inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    project_exec = {
+      url = "github:github_username/repo_name";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+   };
+   ```
+2. You can then install it from `inputs.project_exec.packages.${system}.default` where `${system}` is your system descriptor. For Linux, it is usually `x86_64-linux`.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+    - [ ] Nested Feature
+
+See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Top contributors:
+
+<a href="https://github.com/github_username/repo_name/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
+</a>
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the project_license. See [`LICENSE.md`](./LICENSE.md) for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@bluesky_handle](https://bsky.app/profile/bluesky_handle) - email@email_client.com
+
+Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for this README
+* []()
+* []()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
+[forks-url]: https://github.com/github_username/repo_name/network/members
+[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[stars-url]: https://github.com/github_username/repo_name/stargazers
+[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-url]: https://github.com/github_username/repo_name/issues
+[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.md
+
+[product-screenshot]: images/screenshot.png
+[Rust]: https://img.shields.io/badge/Rust-B7400F?style=for-the-badge&logo=rust&logoColor=white
+[Rust-url]: https://www.rust-lang.org/
+[Nix]: https://img.shields.io/badge/nix-0B1120?style=for-the-badge&logo=nixos
+[Nix-url]: https://nixos.org/
+[Bevy]: https://img.shields.io/badge/Bevy-1E1E22?style=for-the-badge&logo=bevy&logoColor=white
+[Bevy-url]: https://bevy.org

@@ -1,5 +1,5 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
+<a id="readme-top"></a>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
@@ -22,29 +22,30 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT][license-shield]][license-url]
-
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![project_license][license-shield]][license-url]
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<h1 align="center">🚀Vue + Typescript Bootstraper</h1>
+  <a href="https://github.com/github_username/repo_name">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">project_title</h3>
 
   <p align="center">
-    An opinionated bootstrapper to create a Vue.js application, with first class
-    Typescript support, powered by Vite.js
+    project_description
     <br />
-    <a href="https://gitlab.com/bootstrappers/vue-typescript-bootstrapper"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://gitlab.com/bootstrappers/vue-typescript-bootstrapper">View Demo</a>
-    ·
-    <a href="https://gitlab.com/bootstrappers/vue-typescript-bootstrapper/-/issues">Report Bug</a>
-    ·
-    <a href="https://gitlab.com/bootstrappers/vue-typescript-bootstrapper/-/issues">Request Feature</a>
+    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    &middot;
+    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    &middot;
+    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -53,225 +54,112 @@
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
-
-<!-- vim-markdown-toc GitLab -->
-
-* [About The Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-  * [Directory Structure](#directory-structure)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Acknowledgments](#acknowledgments)
-
-<!-- vim-markdown-toc -->
-
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
 </details>
+
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Vue Ts Bootstrapper Screenshot][product-screenshot]](https://gitlab.com/bootstrappers/vue-typescript-bootstrapper)
-This project is used as a base for other project to start on. It provides a
-complete package to work with Vue.js 3, with Typescript, on Vite. It is also
-loaded with support for routing using Vue Router, internationalization using
-VueI18n and TailwindCSS support out of the box.
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-It contains opinionated defaults, with ESLint as the primary linter, following
-*mostly* the AirBnB Javascript and Typescript styleguides. Jest for easy testing
-purposes (WIP) all bundled up in a Nix flake to ease deployment and deployment
-cycles on Nix powered configurations.
+Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github_username`, `repo_name`, `bluesky_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
 ### Built With
 
-* [![Vue.js][Vue]][Vue-url]
-* [![Vite.js][Vite]][Vite-url]
-* [![Typescript][Typescript]][Typescript-url]
-* [![TailwindCSS][TailwindCSS]][TailwindCSS-url]
 * [![Nix][Nix]][Nix-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Working with this bootstrapper is as simple as cloning the repository and
-building on top of it. And if you are using Nix + Direnv as your daily driver,
-you don't even need to think about the dependencies to install, as the flake
-will spawn a convenient development shell for you.
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-* `NodeJS` ⩾ 21
-
-If you intend to work with Nix:
-
-* `Nix` ⩾ 2.18.1
-* `Direnv` ⩾ 2.33.0
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
 ### Installation
 
-1. Clone the repository in your desired project directory:
-```bash
-git clone https://gitlab.com/bootstrappers/vue-typescript-bootstrapper.git path/to/your/project
-```
-
-2. Navigate to the project directory you just use and remove `.git`:
-```bash
-cd path/to/your/project
-rm -rf .git
-```
-
-3. (Optional) Allow direnv to gain access to the dependencies using Nix:
-```bash
-direnv allow
-```
-
-4. Install the NPM dependencies:
-```bash
-npm install
-```
-
-5. Change the information to your project's in the `package.json` and (optional) flake:
-
-`package.json`
-```json
-{
-  "name": "vue-typescript-bootstrapper",
-  "author": "Virgil Ribeyre",
-  "license": "MIT",
-  "description": "An opinionated bootstrapper to create a Vue.js application, with first class Typescript support, powered by Vite.js",
-  "keywords": [
-    "bootstrapper",
-    "template",
-    "typescript",
-    "eslint",
-    "vuejs",
-    "tailwindcss",
-    "vite"
-  ],
-  "version": "1.0.0",
-...
-```
-
-`flake.nix`
-```nix
-{
-  description = "An opinionated bootstrapper to create a Vue.js application, with first class Typescript support, powered by Vite.js";
-# --Snip --
-}
-```
-6. Start-up Vite and you're good to go!
-```bash
-npm run dev
-```
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/github_username/repo_name.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
+5. Change git remote url to avoid accidental pushes to base project
+   ```sh
+   git remote set-url origin github_username/repo_name
+   git remote -v # confirm the changes
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- USAGE EXAMPLES -->
 
+
+
+<!-- USAGE EXAMPLES -->
 ## Usage
 
-* Running in a Development environment:
-```bash
-npm run dev
-```
-Vite enable Hot Reload by default, and will react to changes to your code as you
-save.
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-* Generating production builds
-```bash
-npm run build
-```
-
-* Lint the entire code base
-```bash
-npm run lint && npm run lint:markup
-```
-There are 2 different commands, as Vue files needs to be linted with `vue-tsc`
-directly, and not with ESLint.
-
-* Generate Nix derivation:
-```
-make
-```
-
-* Build project with Nix:
-```
-make build
-```
-
-### Directory Structure
-
-<!-- LTeX: enabled=false -->
-```
-.
-├── nix/
-│   └── Contains the files you need for building with Nix.
-├── src/
-│   ├── main.ts | Your app TS entry point
-│   ├── App.vue | Your app entry point
-│   ├── router.ts | Generates the router instance
-│   ├── assets/
-│   │   ├── styles/
-│   │   │   ├── *all.css* | Imports all other styles
-│   │   │   ├── app/
-│   │   │   │   └── YourStyleSheet.css
-│   │   │   ├── globals/
-│   │   │   │   └── Contains all your global CSS variables
-│   │   │   └── vendors/
-│   │   │       └── Contains other vendors CSS
-│   │   └── images/
-│   │       └── Contains the images of your app.
-│   ├── components/
-│   │   └── ComponentName/
-│   │       ├── ComponentName.css
-│   │       ├── ComponentName.ts
-│   │       └── ComponentName.vue
-│   ├── hooks/
-│   │   └── Contains your TS hooks
-│   ├── i18n/
-│   │   ├── index.ts | Generates vueI18n instance
-│   │   └── messages/
-│   │       ├── en
-│   │       ├── fr
-│   │       └── ...
-│   ├── pages/
-│   │   └── PageName/
-│   │       ├── PageName.vue
-│   │       ├── PageName.ts
-│   │       └── PageName.css
-│   ├── routes/
-│   │   └── Contains your routes
-│   └── types/
-│       └── Contains your custom types
-├── test/
-│   └── Contains your test (WIP)
-└── Makefile | Eases Nix derivation generation
-```
-<!-- LTeX: enabled=true -->
-
+_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Modify Storybook configuration
-- [ ] Add storybook documentation
-- [ ] Add proper testing support
-- [ ] Switch to personal ESLint configuration
-- [ ] Add link to personal styleguide
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+    - [ ] Nested Feature
 
-See the [open issues](https://gitlab.com/bootstrappers/vue-typescript-bootstrapper/-/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- CONTRIBUTING -->
@@ -279,33 +167,51 @@ See the [open issues](https://gitlab.com/bootstrappers/vue-typescript-bootstrapp
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-**Contributions are only available on GitLab.**
-
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
-1. Fork the Project **on GitLab**
+1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'feat: Add some AmazingFeature'`), your
-   commit message should follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specifications
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Top contributors:
+
+<a href="https://github.com/github_username/repo_name/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
+</a>
+
+
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the project_license. See [`LICENSE.md`](./LICENSE.md) for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@bluesky_handle](https://bsky.app/profile/bluesky_handle) - email@email_client.com
+
+Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for their amazing README template
-
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template) for this README
+* []()
+* []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -313,39 +219,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/gitlab/contributors/bootstrappers/vue-typescript-bootstrapper.svg?style=for-the-badge&logo=gitlab
-[contributors-url]: https://gitlab.com/bootstrappers/vue-typescript-bootstrapper/-/graphs/master?ref_type=heads
-
-[forks-shield]: https://img.shields.io/gitlab/forks/bootstrappers/vue-typescript-bootstrapper.svg?style=for-the-badge&logo=gitlab
-[forks-url]: https://gitlab.com/bootstrappers/vue-typescript-bootstrapper/-/forks
-
-[stars-shield]: https://img.shields.io/gitlab/stars/bootstrappers/vue-typescript-bootstrapper.svg?style=for-the-badge&logo=gitlab
-[stars-url]: https://gitlab.com/bootstrappers/vue-typescript-bootstrapper/-/starrers
-
-[issues-shield]: https://img.shields.io/gitlab/issues/open/bootstrappers%2Fvue-typescript-bootstrapper?style=for-the-badge
-
-[issues-url]: https://gitlab.com/bootstrappers/vue-typescript-bootstrapper/-/issues
-
-[license-shield]: https://img.shields.io/gitlab/license/bootstrappers%2Fvue-typescript-bootstrapper?style=for-the-badge&logo=gitlab
-
-[license-url]: https://gitlab.com/bootstrappers/vue-typescript-bootstrapper/-/blob/master/LICENSE?ref_type=heads
-
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/virgil-ribeyre-810135196/
+[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
+[forks-url]: https://github.com/github_username/repo_name/network/members
+[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[stars-url]: https://github.com/github_username/repo_name/stargazers
+[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-url]: https://github.com/github_username/repo_name/issues
+[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.md
 
 [product-screenshot]: images/screenshot.png
 [Nix]: https://img.shields.io/badge/nix-0B1120?style=for-the-badge&logo=nixos
 [Nix-url]: https://nixos.org/
-
-[Vue]: https://img.shields.io/badge/Vue-0B1120?style=for-the-badge&logo=vuedotjs
-[Vue-url]: https://vuejs.org/
-
-[Vite]: https://img.shields.io/badge/Vite-0B1120?style=for-the-badge&logo=vite
-[Vite-url]: https://vitejs.dev/
-
-[TailwindCSS]: https://img.shields.io/badge/TailwindCSS-0B1120?style=for-the-badge&logo=tailwindcss
-[TailwindCSS-url]: https://tailwindcss.com/
-
-[Typescript]: https://img.shields.io/badge/Typescript-0B1120?style=for-the-badge&logo=typescript
-[Typescript-url]: https://www.typescriptlang.org/
 

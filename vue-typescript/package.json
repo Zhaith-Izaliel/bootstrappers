@@ -1,6 +1,6 @@
 {
   "name": "vue-typescript-bootstrapper",
-  "author": "Virgil Ribeyre",
+  "author": "Firstname Lastname",
   "license": "MIT",
   "description": "An opinionated bootstrapper to create a Vue.js application, with first class Typescript support, powered by Vite.js",
   "keywords": [
