@@ -190,7 +190,7 @@ Distributed under the MIT. See [`LICENSE.md`](./LICENSE.md) for more information
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@zhaith-izaliel.bsky.social](https://bsky.app/profile/zhaith-izaliel.bsky.social) - zhaith.izaliel@silvered-ivy.games.com
+Zhaith Izaliel - [@zhaith-izaliel.bsky.social](https://bsky.app/profile/zhaith-izaliel.bsky.social) - zhaith.izaliel@silvered-ivy.games.com
 
 Project Link: [https://github.com/Zhaith-Izaliel/bootstrappers](https://github.com/Zhaith-Izaliel/bootstrappers)
 
