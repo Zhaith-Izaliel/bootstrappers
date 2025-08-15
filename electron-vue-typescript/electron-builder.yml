@@ -1,5 +1,6 @@
 appId: com.electron.app
 productName: electron-vue-typescript
+electronVersion: 37.2.6
 directories:
   buildResources: build
 files:
