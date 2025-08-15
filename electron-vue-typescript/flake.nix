@@ -14,16 +14,20 @@
       perSystem = {pkgs, ...}: {
         devShells = {
           # nix develop
-          default = pkgs.mkShell {
-            ELECTRON_SKIP_BINARY_DOWNLOAD = "1";
+          default = let
+            electron = pkgs.electron_37;
+          in
+            pkgs.mkShell {
+              ELECTRON_SKIP_BINARY_DOWNLOAD = "1";
 
-            nativeBuildInputs = with pkgs; [
-              nodePackages.prettier
-              nodePackages.typescript-language-server
-              nodejs_22
-              electron_37
-            ];
-          };
+              nativeBuildInputs =
+                (with pkgs; [
+                  nodePackages.prettier
+                  nodePackages.typescript-language-server
+                  nodejs_22
+                ])
+                ++ [electron];
+            };
         };
 
         packages = {
