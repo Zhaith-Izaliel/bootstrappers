@@ -2,7 +2,7 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
   };
 
   outputs = inputs @ {flake-parts, ...}:
@@ -16,7 +16,12 @@
 
           c-makefile = {
             description = "A complete bootstrapper for C and C++ project using a simple recursive Makefile.";
-            path = ./c;
+            path = ./c-makefile;
+          };
+
+          electron-vue-typescript = {
+            description = "An opinionated bootstrapper to create an Electron application with first class Vue/Typescript support, validated by ESLint.";
+            path = ./electron-vue-typescript;
           };
 
           godot = {
@@ -35,7 +40,7 @@
           };
 
           typescript = {
-            description = "A NodeJS app + Typescript bootstrapper.";
+            description = "An opinionated bootstrapper to create a Typescript application, validated by ESLint.";
             path = ./typescript;
           };
 

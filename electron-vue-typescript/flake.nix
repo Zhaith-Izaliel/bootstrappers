@@ -1,8 +1,7 @@
 {
-  description = "An opinionated bootstrapper to create a Vue.js application, with first class Typescript support, powered by Vite.js";
-
+  description = "An opinionated bootstrapper to create an Electron application with first class Vue/Typescript support, validated by ESLint.";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
   };
 
   outputs = inputs @ {flake-parts, ...}: let
@@ -16,10 +15,13 @@
         devShells = {
           # nix develop
           default = pkgs.mkShell {
+            ELECTRON_SKIP_BINARY_DOWNLOAD = "1";
+
             nativeBuildInputs = with pkgs; [
               nodePackages.prettier
               nodePackages.typescript-language-server
               nodejs_22
+              electron_37
             ];
           };
         };
