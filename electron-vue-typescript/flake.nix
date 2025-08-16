@@ -19,6 +19,7 @@
           in
             pkgs.mkShell {
               ELECTRON_SKIP_BINARY_DOWNLOAD = "1";
+              ELECTRON_EXEC_PATH = "${electron}/bin/electron";
 
               nativeBuildInputs =
                 (with pkgs; [
