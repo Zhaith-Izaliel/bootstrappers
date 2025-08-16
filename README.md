@@ -100,8 +100,7 @@ This is a personal collection of opinionated project templates to get you starte
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To set up a project on any of the languages available here, follow these simple steps.
 
 ### Prerequisites
 
@@ -113,12 +112,13 @@ Every template has its own requirements managed through a dev-shell in the flake
 1. Create an empty directory where appropriate
    ```sh
    mkdir my-awesome-project
+   cd my-awesome-project
    ```
 2. Initialize the directory with the required template
    ```sh
    nix flake init -t "github:Zhaith-Izaliel/bootstrappers#rust"
    ```
-3. Done.
+3. You're all set to go!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -127,7 +127,7 @@ Every template has its own requirements managed through a dev-shell in the flake
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-As long as you know the name of the project, you can simply initialize a new directory with the corresponding command:
+As long as you know the `name` of the template, you can simply initialize a new directory with the corresponding command:
 
 ```sh
 nix flake init -t "github:Zhaith-Izaliel/bootstrappers#name"
@@ -143,6 +143,8 @@ With `name` being one of the subdirectory of this repo.
 ## Roadmap
 
 I will add more template as long as it fits my usage.
+
+Of course, you are welcomed to provide your own bootstrapper or update one of them here. As long as the PR is comprehensive enough for me to maintain it or if you plan to help me maintain the bootstrappers if I don't use the languages you're using.
 
 See the [open issues](https://github.com/Zhaith-Izaliel/bootstrappers/issues) for a full list of proposed features (and known issues).
 
@@ -186,7 +188,7 @@ Distributed under the MIT. See [`LICENSE.md`](./LICENSE.md) for more information
 <!-- CONTACT -->
 ## Contact
 
-Zhaith Izaliel - [@zhaith-izaliel.bsky.social](https://bsky.app/profile/zhaith-izaliel.bsky.social) - zhaith.izaliel@silvered-ivy.games.com
+Zhaith Izaliel - [@zhaith-izaliel.bsky.social](https://bsky.app/profile/zhaith-izaliel.bsky.social) - zhaith.izaliel@silvered-ivy.games
 
 Project Link: [https://github.com/Zhaith-Izaliel/bootstrappers](https://github.com/Zhaith-Izaliel/bootstrappers)
 
