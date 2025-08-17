@@ -80,8 +80,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 This is a personal collection of opinionated project templates to get you started with your favorite languages. Everything is simple to set up using Nix flake's template.
 
 
