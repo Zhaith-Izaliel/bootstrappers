@@ -7,7 +7,7 @@
   ],
   "compilerOptions": {
     "composite": true,
-    "moduleResolution": "nodenext",
+    "moduleResolution": "bundler",
     "types": [
       "electron-vite/node"
     ]
