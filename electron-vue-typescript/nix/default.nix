@@ -4,6 +4,7 @@
   name,
   version,
   lib,
+  electron,
 }:
 buildNpmPackage {
   inherit version;
@@ -15,9 +16,21 @@ buildNpmPackage {
     npmRoot = lib.cleanSource ../.;
   };
 
+  env = {
+    ELECTRON_SKIP_BINARY_DOWNLOAD = "1";
+  };
+
+  nativeBuildInputs = [
+    electron
+  ];
+
   npmConfigHook = importNpmLock.npmConfigHook;
 
-  installPhase = ''
-    cp -r dist $out
+  postInstall = ''
+    mkdir -p $out
+    cp -r out $out
+    mkdir -p $out/bin
+    makeWrapper ${electron}/bin/electron $out/bin/${name} \
+      --add-flags $out/out/main/index.js
   '';
 }
