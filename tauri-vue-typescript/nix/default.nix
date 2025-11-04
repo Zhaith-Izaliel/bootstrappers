@@ -24,7 +24,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
   cargoLock.lockFile = ../${finalAttrs.cargoRoot}/Cargo.lock;
 
   npmDeps = importNpmLock {
-    npmRoot = lib.cleanSource ../src/.;
+    npmRoot = finalAttrs.src;
   };
 
   npmConfigHook = importNpmLock.npmConfigHook;
