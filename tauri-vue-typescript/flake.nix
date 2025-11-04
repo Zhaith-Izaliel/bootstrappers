@@ -1,7 +1,6 @@
 {
-  description = "An opinionated bootstrapper to create a Tauri application with first class Vue/Typescript support, validated by ESLint.";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   outputs = inputs @ {flake-parts, ...}: let
@@ -9,7 +8,7 @@
     packageJson = builtins.fromJSON (builtins.readFile ./package.json);
   in
     flake-parts.lib.mkFlake {inherit inputs;} ({...}: {
-      systems = ["x86_64-linux" "aarch64-darwin" "x86_64-darwin"];
+      systems = ["x86_64-linux" "aarch64-linux" "aarch64-darwin" "x86_64-darwin"];
 
       perSystem = {pkgs, ...}: {
         devShells = {

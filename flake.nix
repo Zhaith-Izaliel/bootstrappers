@@ -24,6 +24,11 @@
             path = ./electron-vue-typescript;
           };
 
+          tauri-vue-typescript = {
+            description = "An opinionated bootstrapper to create a Tauri application with first class Vue/Typescript support, validated by ESLint.";
+            path = ./tauri-vue-typescript;
+          };
+
           godot = {
             description = "A simple Godot bootstrapper.";
             path = ./godot;
