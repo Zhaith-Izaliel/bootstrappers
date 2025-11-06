@@ -12,6 +12,7 @@
   openssl,
   pkg-config,
   webkitgtk_4_1,
+  flatpak-xdg-utils,
   wrapGAppsHook4,
 }:
 rustPlatform.buildRustPackage (finalAttrs: {
@@ -27,7 +28,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     npmRoot = finalAttrs.src;
   };
 
-  npmConfigHook = importNpmLock.npmConfigHook;
+  # npmConfigHook = importNpmLock.npmConfigHook;
 
   nativeBuildInputs =
     [
@@ -36,7 +37,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
       # Setup npm
       nodejs
-      npmHooks.npmConfigHook
+      importNpmLock.npmConfigHook
 
       # Make sure we can find our libraries
       pkg-config
@@ -47,6 +48,7 @@ rustPlatform.buildRustPackage (finalAttrs: {
     glib-networking # Most Tauri apps need networking
     openssl
     webkitgtk_4_1
+    flatpak-xdg-utils # For building .AppImage
   ];
 
   # Set our Tauri source directory

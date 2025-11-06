@@ -1,18 +1,18 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "tauri_bootstraper",
+  "productName": "tauri-bootstrapper",
   "version": "0.1.0",
-  "identifier": "com.zhaith.tauri_bootstraper",
+  "identifier": "com.zhaith.tauri-bootstrapper",
   "build": {
     "beforeDevCommand": "npm run dev",
-    "devUrl": "http://localhost:8080",
+    "devUrl": "http://localhost:1420",
     "beforeBuildCommand": "npm run build",
     "frontendDist": "../dist"
   },
   "app": {
     "windows": [
       {
-        "title": "tauri_bootstraper",
+        "title": "tauri-bootstrapper",
         "width": 800,
         "height": 600
       }
