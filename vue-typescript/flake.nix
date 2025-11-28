@@ -2,7 +2,7 @@
   description = "An opinionated bootstrapper to create a Vue.js application, with first class Typescript support, powered by Vite.js";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
   };
 
   outputs = inputs @ {flake-parts, ...}: let

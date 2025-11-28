@@ -1,7 +1,7 @@
 {
   description = "An opinionated bootstrapper to create an Electron application with first class Vue/Typescript support, validated by ESLint.";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
   };
 
   outputs = inputs @ {flake-parts, ...}: let
