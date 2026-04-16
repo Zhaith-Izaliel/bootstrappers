@@ -30,19 +30,18 @@ rustPlatform.buildRustPackage (finalAttrs: {
 
   # npmConfigHook = importNpmLock.npmConfigHook;
 
-  nativeBuildInputs =
-    [
-      # Pull in our main hook
-      cargo-tauri.hook
+  nativeBuildInputs = [
+    # Pull in our main hook
+    cargo-tauri.hook
 
-      # Setup npm
-      nodejs
-      importNpmLock.npmConfigHook
+    # Setup npm
+    nodejs
+    importNpmLock.npmConfigHook
 
-      # Make sure we can find our libraries
-      pkg-config
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isLinux [wrapGAppsHook4];
+    # Make sure we can find our libraries
+    pkg-config
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ wrapGAppsHook4 ];
 
   buildInputs = lib.optionals stdenv.hostPlatform.isLinux [
     glib-networking # Most Tauri apps need networking

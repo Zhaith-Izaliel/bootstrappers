@@ -8,14 +8,20 @@
   libGL,
   libxkbcommon,
   alsa-lib,
-}: {
+}:
+{
   pname,
   version,
   src,
-  desktopItems ? [],
+  desktopItems ? [ ],
 }:
 stdenv.mkDerivation {
-  inherit pname version src desktopItems;
+  inherit
+    pname
+    version
+    src
+    desktopItems
+    ;
 
   nativeBuildInputs = [
     autoPatchelfHook

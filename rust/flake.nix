@@ -3,28 +3,40 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
   };
 
-  outputs = inputs @ {flake-parts, ...}: let
-    inherit (cargoToml.package) name version;
-    cargoToml = builtins.fromTOML (builtins.readFile ./Cargo.toml);
-  in
-    flake-parts.lib.mkFlake {inherit inputs;} ({...}: {
-      systems = ["x86_64-linux" "aarch64-darwin" "x86_64-darwin"];
+  outputs =
+    inputs@{ flake-parts, ... }:
+    let
+      inherit (cargoToml.package) name version;
+      cargoToml = builtins.fromTOML (builtins.readFile ./Cargo.toml);
+    in
+    flake-parts.lib.mkFlake { inherit inputs; } (
+      { ... }:
+      {
+        systems = [
+          "x86_64-linux"
+          "aarch64-linux"
+          "aarch64-darwin"
+          "x86_64-darwin"
+        ];
 
-      perSystem = {pkgs, ...}: {
-        devShells = {
-          # nix develop
-          default = pkgs.mkShell {
-            nativeBuildInputs = with pkgs; [
-              rustc
-              cargo
-              rust-analyzer
-            ];
+        perSystem =
+          { pkgs, ... }:
+          {
+            devShells = {
+              # nix develop
+              default = pkgs.mkShell {
+                nativeBuildInputs = with pkgs; [
+                  rustc
+                  cargo
+                  rust-analyzer
+                ];
+              };
+            };
+
+            packages = {
+              default = pkgs.callPackage ./nix { inherit version name; };
+            };
           };
-        };
-
-        packages = {
-          default = pkgs.callPackage ./nix {inherit version name;};
-        };
-      };
-    });
+      }
+    );
 }

@@ -1,64 +1,90 @@
 {
-  description = "A very basic flake";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
   };
 
-  outputs = inputs @ {flake-parts, ...}:
-    flake-parts.lib.mkFlake {inherit inputs;} ({...}: {
-      flake = {
-        templates = {
-          bevy = {
-            description = "A simple Bevy bootstrapper.";
-            path = ./bevy;
+  outputs =
+    inputs@{ flake-parts, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } (
+      { ... }:
+      {
+        systems = [
+          "x86_64-linux"
+          "aarch64-linux"
+          "x86_64-darwin"
+          "aarch64-darwin"
+        ];
+
+        perSystem =
+          {
+            pkgs,
+            ...
+          }:
+          {
+            devShells = {
+              # nix develop
+              default = pkgs.mkShell {
+                nativeBuildInputs = with pkgs; [
+                  just
+                  nixfmt-tree
+                ];
+              };
+            };
           };
 
-          c-makefile = {
-            description = "A complete bootstrapper for C and C++ project using a simple recursive Makefile.";
-            path = ./c-makefile;
-          };
+        flake = {
+          templates = {
+            bevy = {
+              description = "A simple Bevy bootstrapper.";
+              path = ./bevy;
+            };
 
-          electron-vue-typescript = {
-            description = "An opinionated bootstrapper to create an Electron application with first class Vue/Typescript support, validated by ESLint.";
-            path = ./electron-vue-typescript;
-          };
+            c-makefile = {
+              description = "A complete bootstrapper for C and C++ project using a simple recursive Makefile.";
+              path = ./c-makefile;
+            };
 
-          tauri-vue-typescript = {
-            description = "An opinionated bootstrapper to create a Tauri application with first class Vue/Typescript support, validated by ESLint.";
-            path = ./tauri-vue-typescript;
-          };
+            electron-vue-typescript = {
+              description = "An opinionated bootstrapper to create an Electron application with first class Vue/Typescript support, validated by ESLint.";
+              path = ./electron-vue-typescript;
+            };
 
-          godot = {
-            description = "A simple Godot bootstrapper.";
-            path = ./godot;
-          };
+            tauri-vue-typescript = {
+              description = "An opinionated bootstrapper to create a Tauri application with first class Vue/Typescript support, validated by ESLint.";
+              path = ./tauri-vue-typescript;
+            };
 
-          haskell = {
-            description = "A batteries-included Haskell project template for Nix, based on https://github.com/srid/haskell-template";
-            path = ./haskell;
-          };
+            godot = {
+              description = "A simple Godot bootstrapper.";
+              path = ./godot;
+            };
 
-          rust = {
-            description = "A Rust bootstrapper for any rust projects.";
-            path = ./rust;
-          };
+            haskell = {
+              description = "A batteries-included Haskell project template for Nix, based on https://github.com/srid/haskell-template";
+              path = ./haskell;
+            };
 
-          typescript = {
-            description = "An opinionated bootstrapper to create a Typescript application, validated by ESLint.";
-            path = ./typescript;
-          };
+            rust = {
+              description = "A Rust bootstrapper for any rust projects.";
+              path = ./rust;
+            };
 
-          vue = {
-            description = "An opinionated bootstrapper to create a Vue.js application, with first class Typescript support, powered by Vite.js.";
-            path = ./vue-typescript;
-          };
+            typescript = {
+              description = "An opinionated bootstrapper to create a Typescript application, validated by ESLint.";
+              path = ./typescript;
+            };
 
-          zig = {
-            description = "A simple Zig bootstrapper.";
-            path = ./zig;
+            vue = {
+              description = "An opinionated bootstrapper to create a Vue.js application, with first class Typescript support, powered by Vite.js.";
+              path = ./vue-typescript;
+            };
+
+            zig = {
+              description = "A simple Zig bootstrapper.";
+              path = ./zig;
+            };
           };
         };
-      };
-    });
+      }
+    );
 }
