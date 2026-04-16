@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
   };
 
   outputs =
@@ -32,6 +32,8 @@
                 nativeBuildInputs = with pkgs; [
                   pkg-config
                   rustc
+                  clang
+                  lld
                   cargo
                   rust-analyzer
                 ];
@@ -39,10 +41,10 @@
                   udev
                   alsa-lib
                   vulkan-loader
-                  libX11
-                  libXcursor
-                  libXi
-                  libXrandr
+                  xorg.libX11
+                  xorg.libXcursor
+                  xorg.libXi
+                  xorg.libXrandr
                   libxkbcommon
                   wayland
                 ];
