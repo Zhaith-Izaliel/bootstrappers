@@ -43,6 +43,3 @@ result
 
 # Direnv links
 .direnv
-
-# Helix configuration overrides
-.helix
