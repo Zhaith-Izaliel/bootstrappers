@@ -83,6 +83,11 @@
               description = "A simple Zig bootstrapper.";
               path = ./zig;
             };
+
+            python = {
+              description = "Python development environment with `uv` for ad-hoc dependencies.";
+              path = ./python;
+            };
           };
         };
       }
