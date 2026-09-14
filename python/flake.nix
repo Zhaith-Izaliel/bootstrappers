@@ -39,10 +39,7 @@
                     python.pkgs.python-lsp-server
                   ];
 
-                  shellHook = ''
-                    export LD_LIBRARY_PATH="${libPath}:$LD_LIBRARY_PATH"
-                  '';
-
+                  LD_LIBRARY_PATH = "${libPath}:$LD_LIBRARY_PATH";
                 };
             };
           };
