@@ -84,9 +84,14 @@
               path = ./zig;
             };
 
-            python = {
+            python-uv = {
               description = "Python development environment with `uv` for ad-hoc dependencies.";
-              path = ./python;
+              path = ./python-uv;
+            };
+
+            python-nix = {
+              description = "Python development environment with dependencies managed by nix.";
+              path = ./python-nix;
             };
           };
         };
